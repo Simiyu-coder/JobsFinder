@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
-import useFetch from '../../../hook/useFetch';
+//import useFetch from '../../../hook/useFetch';
 
 
 import styles from './popularjobs.style';
@@ -9,14 +9,17 @@ import { COLORS,SIZES} from '../../../constants';
 import  PopularjobsCard  from '../../common/cards/popular/PopularJobCard';
 
 const Popularjobs = () => {
-const router = useRouter();
+const isLoading =false;
+const error = false;
+
+  /*const router = useRouter();
 const { data, isLoading,error } = useFetch('search', {
   query: 'React Developer',
   num_pages: '1'
 })
 
 
-console.log(data);
+console.log(data);*/
 
   return (
     <View style={styles.container}>
