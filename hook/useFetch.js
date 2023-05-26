@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
+
 const useFetch = ( endpoint, query) => {
     const [ data, setData] = useState([]);
-    const [ isLoading, setIsLoading] = useState(false);
+    const [ isLoading, setIsLoading] = useState(true);
     const [ error, setError] = useState(null);
 
 
@@ -27,8 +28,7 @@ const fetchData = async () => {
       setData(response.data.data);
       setIsLoading(false);
     } catch (error) {
-       setError(error);
-       alert('There is an error!')
+      
     } finally{
         setIsLoading(false);
     }
